@@ -10,15 +10,9 @@ påse > sten
 
 olika_drag = ["sten", "sax", "påse"]
 
-drag1 = input()
+drag1 = input("Skriv in vilket drag du vill göra: ")
 drag2 = str(random.choice(olika_drag))
-print(drag2)
-
-if drag1 == påse and drag2 == sten:
-    print("Du vann!")
-        
-else:
-    pass
+print("Motståndaren valde:", drag2)
 
 if drag1 > drag2:
     print("Du vann")
