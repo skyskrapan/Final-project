@@ -2,12 +2,12 @@ import random
 
 olika_drag = ["sten", "sax", "påse"]
 while True:
-    drag1 = input("Skriv in vilket drag du vill göra: ")
+    drag1 = str(input("Skriv in vilket drag du vill göra: ").lower())
 
-    if drag1 != "sten":
-        print("Det draget finns inte, använd sten, sax eller påse :)")
-        break
+    if drag1 == "sten" or drag1 == "sax" or drag1 == "påse":
+        pass
     else:
+        print("Det draget finns inte, använd sten, sax eller påse :)")
         continue
     
     drag2 = str(random.choice(olika_drag))
