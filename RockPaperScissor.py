@@ -1,6 +1,9 @@
 import random
 
+bästav = int(input("Skriv in hur många gånger ni vill köra:"))
+
 olika_drag = ["sten", "sax", "påse"]
+
 while True:
     drag1 = str(input("Skriv in vilket drag du vill göra: ").lower())
 
