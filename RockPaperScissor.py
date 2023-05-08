@@ -1,10 +1,12 @@
 import random
 
-bästav = int(input("Skriv in hur många gånger ni vill köra:"))
+rundor = int(input("Skriv in hur många gånger ni vill köra: "))
 
 olika_drag = ["sten", "sax", "påse"]
 
-while True:
+poäng = 0
+
+for i in range(rundor):
     drag1 = str(input("Skriv in vilket drag du vill göra: ").lower())
 
     if drag1 == "sten" or drag1 == "sax" or drag1 == "påse":
@@ -22,18 +24,32 @@ while True:
     elif drag1 == "sten":
         if drag2 == "påse":
             print("Du förlora!")
+            poäng -= 1
         else:
             print("Du vann!")
+            poäng += 1
 
     elif drag1 == "påse":
         if drag2 == "sten":
             print("Du vann!")
+            poäng += 1
         else:
             print("Du förlora!")
+            poäng -= 1
 
     elif drag1 == "sax":
         if drag2 == "påse":
             print("Du vann!")
+            poäng += 1
         else:
             print("Du förlora!")
-    break
+            poäng -= 1
+
+if poäng > 0:
+    print("Du vann totalen!")
+elif poäng < 0:
+    print("Datorn vann totalen!")
+else:
+    print("Det blev lika i totalen!")
+    
+print("Totala poängen blev {}".format(poäng))
